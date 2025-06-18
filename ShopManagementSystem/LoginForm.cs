@@ -28,10 +28,10 @@ namespace ShopManagementSystem
 
                 if (count > 0)
                 {
-                    // Успішна авторизація
+                    
                     this.Hide();
                     var productsForm = new ProductsForm();
-                    productsForm.FormClosed += (s, args) => this.Close(); // закриє LoginForm при виході з ProductsForm
+                    productsForm.FormClosed += (s, args) => this.Close(); 
                     productsForm.Show();
                 }
                 else

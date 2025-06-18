@@ -15,7 +15,7 @@ namespace ShopManagementSystem
         public Form1()
         {
             InitializeComponent();
-            Users.Initialize(); // Ініціалізація бази
+            Users.Initialize(); 
         }
 
 
@@ -23,6 +23,11 @@ namespace ShopManagementSystem
         {
             ProductsForm productsForm = new ProductsForm();
             productsForm.ShowDialog();
+        }
+
+        private void btnProducts_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

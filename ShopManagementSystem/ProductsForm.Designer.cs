@@ -197,8 +197,8 @@ namespace ShopManagementSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var addForm = new AddProductForm(this); // передаємо поточну форму
-            addForm.ShowDialog(); // відкриваємо модально
+            var addForm = new AddProductForm(this);
+            addForm.ShowDialog(); 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

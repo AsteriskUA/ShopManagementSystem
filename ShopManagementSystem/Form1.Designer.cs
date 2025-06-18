@@ -39,6 +39,7 @@
             this.btnProducts.TabIndex = 0;
             this.btnProducts.Text = "Товари";
             this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click_1);
             // 
             // Form1
             // 
