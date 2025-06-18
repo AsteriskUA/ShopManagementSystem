@@ -125,7 +125,7 @@ namespace ShopManagementSystem
             }
 
             MessageBox.Show("Товар видалено.");
-            LoadProducts(); // оновлюємо таблицю
+            LoadProducts(); 
         }
 
         private void btnMarkForSale_Click(object sender, EventArgs e)
@@ -191,7 +191,7 @@ namespace ShopManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            LoadProducts(); // перезавантажити товари з урахуванням пошуку
+            LoadProducts(); 
         }
 
 
@@ -208,21 +208,21 @@ namespace ShopManagementSystem
                 PdfWriter.GetInstance(doc, new FileStream(saveFileDialog.FileName, FileMode.Create));
                 doc.Open();
 
-                // Підключення шрифту з кирилицею
+                
                 string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
                 BaseFont baseFont = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
                 Font font = new Font(baseFont, 12);
 
                 PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
 
-                // Заголовки
+                
                 foreach (DataGridViewColumn column in dataGridView1.Columns)
                 {
                     PdfPCell headerCell = new PdfPCell(new Phrase(column.HeaderText, font));
                     table.AddCell(headerCell);
                 }
 
-                // Дані таблиці
+                
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (!row.IsNewRow)
@@ -236,7 +236,7 @@ namespace ShopManagementSystem
                     }
                 }
 
-                // Додати таблицю до документу (одну!)
+                
                 doc.Add(table);
 
                 doc.Close();

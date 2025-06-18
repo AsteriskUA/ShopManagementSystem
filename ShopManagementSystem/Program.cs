@@ -11,10 +11,10 @@ namespace ShopManagementSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Users.Initialize(); // створення бази, якщо нема
+            Users.Initialize(); 
 
             var loginForm = new LoginForm();
-            Application.Run(loginForm); // головний запуск — форма входу
+            Application.Run(loginForm); 
         }
     }
 }
